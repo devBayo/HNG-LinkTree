@@ -2,6 +2,7 @@ header {
   text-align: center;
   max-width: 90rem;
   margin: 0 auto;
+  position: relative;
 }
 
 #profile_img {
@@ -11,10 +12,23 @@ header {
   object-fit: cover;
 }
 
+#share_profile {
+  position: absolute;
+  top: 2rem;
+  right: 7rem;
+}
+
 #twitter {
   margin-top: 1rem;
 }
 
 #slack {
   display: none;
+}
+
+@media (max-width: 37.5em) {
+  #share_profile {
+    top: 2rem;
+    right: 1rem;
+  }
 }

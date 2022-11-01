@@ -5,23 +5,23 @@
   list-style: none;
 }
 
-.link__item {
-  width: 100%;
-  background-color: #eaecf0;
-  padding: 1.5rem 3rem;
-}
-
-.link__item:not(:last-child) {
-  margin-bottom: 1.7rem;
-}
-
 .link:link,
 .link:visited {
+  display: block;
   font-size: 1.6rem;
   font-weight: 500;
   color: #101828;
+
+  width: 100%;
+  background-color: #eaecf0;
+  padding: 1.5rem 3rem;
+
   text-decoration: none;
   transition: color 0.2s;
+}
+
+.link:link:not(:last-child) {
+  margin-bottom: 1.7rem;
 }
 
 .link:hover,

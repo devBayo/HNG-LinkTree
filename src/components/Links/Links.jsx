@@ -2,17 +2,15 @@ import styles from './Links.module.css';
 
 const LinkItem = props => {
   return (
-    <li className={styles.link__item}>
-      <a
-        title={props.title}
-        href={props.href}
-        target="blank"
-        className={styles.link}
-        id={props.id}
-      >
-        {props.children}
-      </a>
-    </li>
+    <a
+      title={props.title}
+      href={props.href}
+      target="blank"
+      className={styles.link}
+      id={props.id}
+    >
+      {props.children}
+    </a>
   );
 };
 
@@ -59,7 +57,7 @@ const Links = ({ username }) => {
   ];
 
   return (
-    <ul className={styles.links}>
+    <div className={styles.links}>
       {links.map(link => (
         <LinkItem
           key={link.id}
@@ -70,7 +68,7 @@ const Links = ({ username }) => {
           {link.content}
         </LinkItem>
       ))}
-    </ul>
+    </div>
   );
 };
 

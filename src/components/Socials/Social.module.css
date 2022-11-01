@@ -1,0 +1,14 @@
+.socials {
+  text-align: center;
+  max-width: 90rem;
+  margin: 2rem auto;
+}
+
+.social-icon {
+  width: 3rem;
+  display: inline-block;
+}
+
+.social-icon:first-child {
+  margin-right: 2rem;
+}

@@ -1,0 +1,29 @@
+.links {
+  text-align: center;
+  max-width: 90rem;
+  margin: 3rem auto;
+  list-style: none;
+}
+
+.link__item {
+  width: 100%;
+  background-color: #eaecf0;
+  padding: 1.5rem 3rem;
+}
+
+.link__item:not(:last-child) {
+  margin-bottom: 1.7rem;
+}
+
+.link:link,
+.link:visited {
+  font-size: 1.6rem;
+  color: #101828;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.link:hover,
+.link:active {
+  color: #555;
+}

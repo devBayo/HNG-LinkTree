@@ -1,5 +1,6 @@
 import Links from './components/Links/Links';
 import Profile from './components/Profile/Profile';
+import Socials from './components/Socials/Socials';
 
 function App() {
   return (
@@ -7,6 +8,7 @@ function App() {
       <Profile />
       <main>
         <Links />
+        <Socials />
       </main>
     </>
   );

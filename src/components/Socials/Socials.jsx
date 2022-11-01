@@ -6,7 +6,10 @@ import styles from './Social.module.css';
 const Socials = () => {
   return (
     <div className={styles.socials}>
-      <a href="@devBayo" target="blank">
+      <a
+        href="https://app.slack.com/client/T042F7V19Q8/D048P16PU2D"
+        target="blank"
+      >
         <img
           src={slackLogo}
           className={styles['social-icon']}

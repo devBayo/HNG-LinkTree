@@ -6,12 +6,20 @@ import styles from './Social.module.css';
 const Socials = () => {
   return (
     <div className={styles.socials}>
-      <img src={slackLogo} className={styles['social-icon']} alt="slack logo" />
-      <img
-        src={githubLogo}
-        className={styles['social-icon']}
-        alt="github logo"
-      />
+      <a href="@devBayo" target="blank">
+        <img
+          src={slackLogo}
+          className={styles['social-icon']}
+          alt="slack logo"
+        />
+      </a>
+      <a href="https://github.com/devbayo" target="blank">
+        <img
+          src={githubLogo}
+          className={styles['social-icon']}
+          alt="github logo"
+        />
+      </a>
     </div>
   );
 };

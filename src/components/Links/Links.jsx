@@ -5,7 +5,7 @@ const LinkItem = props => {
     <a
       title={props.title}
       href={props.href}
-      target="blank"
+      target={props.target || 'blank'}
       className={styles.link}
       id={props.id}
     >
@@ -54,6 +54,13 @@ const Links = ({ username }) => {
       content: 'Design Books',
       title: 'Check out the free design book offered by Zuri',
     },
+    {
+      id: 'contact',
+      href: '/contact',
+      content: 'Contact Me',
+      title: 'You can reach out to me or make an enqiury over here.',
+      target: '_self',
+    },
   ];
 
   return (
@@ -64,6 +71,7 @@ const Links = ({ username }) => {
           href={link.href}
           id={link.id}
           title={link.title}
+          target={link.target}
         >
           {link.content}
         </LinkItem>

@@ -53,7 +53,7 @@ const Form = props => {
       <div className="contact-form-group contact-form-group__max-width contact-form-group__condition">
         <input type="checkbox" id="condition-input" required />
         <label htmlFor="condition-input" id="condition-label">
-          You agree to providing your data to {props.username} who may contact
+          You agree to providing your data to {props.fullname} who may contact
           you.
         </label>
       </div>

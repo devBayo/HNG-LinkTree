@@ -1,4 +1,4 @@
-footer {
+#footer {
   max-width: 92rem;
   margin: 8rem auto 0 auto;
   padding: 4rem 0;
@@ -7,12 +7,12 @@ footer {
   border-top: 1px solid #eee;
 }
 
-h2 {
+#footer h2 {
   color: #667085;
   font-weight: 500;
 }
 
-footer img {
+#footer img {
   height: 2.3rem;
 }
 

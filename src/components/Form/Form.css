@@ -1,0 +1,45 @@
+.contact-form {
+  margin-top: 3rem;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 2.4rem;
+  column-gap: 2rem;
+}
+
+.contact-form-group__max-width {
+  grid-column: 1/-1;
+}
+
+.contact-form-group__condition {
+  display: flex;
+  align-items: flex-start;
+}
+
+#condition-input {
+  height: 1.5rem;
+  width: 1.5rem;
+  margin-right: 1.2rem;
+  border: 1px solid #ccc;
+  border-radius: 0.7rem;
+}
+
+#condition-label {
+  font-size: 1.3rem;
+}
+
+#btn__submit {
+  border: none;
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 600;
+  background-color: #1570ef;
+  box-shadow: 0px 1px 2px #1018280d;
+  padding: 1.3rem;
+  border-radius: 0.7rem;
+}
+
+#btn__submit:hover {
+  cursor: pointer;
+  /* Other styles */
+}

@@ -11,16 +11,9 @@
   grid-column: 1/-1;
 }
 
-.contact-form-input:focus:valid {
-  outline: none;
-  border: 1px solid #51cbef;
-  box-shadow: 0px 1px 2px #51cbef0d;
-}
-
-.contact-form-input:focus:invalid {
-  outline: none;
-  border: 1px solid #f89687;
-  box-shadow: 0px 1px 2px #f896870d;
+.contact-form-group__condition {
+  display: flex;
+  align-items: flex-start;
 }
 
 #condition-input {
@@ -50,9 +43,3 @@
   cursor: pointer;
   /* Other styles */
 }
-
-@media (max-width: 26.6em) {
-  .contact-form-group {
-    grid-column: 1/-1;
-  }
-} ;

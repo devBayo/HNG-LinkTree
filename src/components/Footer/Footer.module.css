@@ -17,9 +17,17 @@
 }
 
 @media (max-width: 37.5em) {
-  footer {
+  #footer {
     flex-direction: column;
     align-items: flex-start;
-    gap: 1.2rem;
+    /* gap: 1.2rem; */
+  }
+
+  img[alt='Zuri logo'] {
+    margin-bottom: 1.2rem;
+  }
+
+  #footer h2 {
+    margin-bottom: 2rem;
   }
 }

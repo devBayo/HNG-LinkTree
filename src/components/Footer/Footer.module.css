@@ -1,8 +1,10 @@
 footer {
   max-width: 92rem;
-  margin: 7em auto 3rem auto;
+  margin: 8rem auto 0 auto;
+  padding: 4rem 0;
   display: flex;
   justify-content: space-between;
+  border-top: 1px solid #eee;
 }
 
 h2 {

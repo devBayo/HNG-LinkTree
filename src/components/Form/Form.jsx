@@ -1,3 +1,5 @@
+import { useState } from 'react';
+import Modal from '../Modal/Modal';
 import './Form.css';
 import FormGroup from './FormGroup';
 
@@ -38,33 +40,48 @@ const formGroups = [
 ];
 
 const Form = props => {
-  return (
-    <form className="contact-form">
-      {formGroups.map((formGroup, i) => (
-        <FormGroup
-          key={i}
-          labelText={formGroup.labelText}
-          input={formGroup.input}
-          class={formGroup.class}
-          textarea={formGroup.textarea}
-        />
-      ))}
+  const [formIsSubmitted, setFormIsSubmitted] = useState(false);
 
-      <div className="contact-form-group contact-form-group__max-width contact-form-group__condition">
-        <input type="checkbox" id="condition-input" required />
-        <label htmlFor="condition-input" id="condition-label">
-          You agree to providing your data to {props.fullname} who may contact
-          you.
-        </label>
-      </div>
-      <button
-        type="submit"
-        id="btn__submit"
-        className="contact-form-group__max-width"
-      >
-        Send message
-      </button>
-    </form>
+  const submitHandler = event => {
+    event.preventDefault();
+    setFormIsSubmitted(true);
+  };
+
+  const closeModalHandler = () => {
+    setFormIsSubmitted(false);
+  };
+
+  return (
+    <>
+      <form className="contact-form" onSubmit={submitHandler}>
+        {formGroups.map((formGroup, i) => (
+          <FormGroup
+            key={i}
+            labelText={formGroup.labelText}
+            input={formGroup.input}
+            class={formGroup.class}
+            textarea={formGroup.textarea}
+          />
+        ))}
+
+        <div className="contact-form-group contact-form-group__max-width contact-form-group__condition">
+          <input type="checkbox" id="condition-input" required />
+          <label htmlFor="condition-input" id="condition-label">
+            You agree to providing your data to {props.fullname} who may contact
+            you.
+          </label>
+        </div>
+        <button
+          type="submit"
+          id="btn__submit"
+          className="contact-form-group__max-width"
+        >
+          Send message
+        </button>
+      </form>
+
+      {formIsSubmitted && <Modal onClick={closeModalHandler} />}
+    </>
   );
 };
 

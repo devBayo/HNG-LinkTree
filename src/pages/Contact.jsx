@@ -11,7 +11,7 @@ const Contact = props => {
         </p>
       </div>
 
-      <Form username={props.username} />
+      <Form fullname={props.fullname} />
     </section>
   );
 };

@@ -5,17 +5,20 @@ import Contact from './pages/Contact';
 import Footer from './components/Footer/Footer';
 
 function App() {
-  const [username, setUsername] = useState('');
+  const [user, setUser] = useState({});
 
   useEffect(() => {
-    setUsername('devBayo');
+    setUser({
+      username: 'devBayo',
+      fullname: 'Abdulqoyyum Ibrahim',
+    });
   }, []);
 
   return (
     <>
       <Routes>
-        <Route path="/" element={<Home username={username} />} />
-        <Route path="/contact" element={<Contact username={username} />} />
+        <Route path="/" element={<Home username={user.username} />} />
+        <Route path="/contact" element={<Contact fullname={user.fullname} />} />
       </Routes>
       <Footer />
     </>

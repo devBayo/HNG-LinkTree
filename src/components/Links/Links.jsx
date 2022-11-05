@@ -1,5 +1,18 @@
 import styles from './Links.module.css';
-import LinkItem from './LinkItem';
+
+const LinkItem = props => {
+  return (
+    <a
+      title={props.title}
+      href={props.href}
+      target={props.target || 'blank'}
+      className={styles.link}
+      id={props.id}
+    >
+      {props.children}
+    </a>
+  );
+};
 
 const Links = ({ username }) => {
   const links = [
@@ -46,6 +59,7 @@ const Links = ({ username }) => {
       href: '/contact',
       content: 'Contact Me',
       title: 'You can reach out to me or make an enqiury over here.',
+      target: '_self',
     },
   ];
 

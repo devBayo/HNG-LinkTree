@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react';
-import { Route, Routes } from 'react-router-dom';
-import Contact from './components/Contact/Contact';
-import Home from './pages/Home';
+import Footer from './components/Footer/Footer';
+import Links from './components/Links/Links';
+import Profile from './components/Profile/Profile';
+import Socials from './components/Socials/Socials';
 
 function App() {
   const [username, setUsername] = useState('');
@@ -11,10 +12,14 @@ function App() {
   }, []);
 
   return (
-    <Routes>
-      <Route path="/" element={<Home username={username} />} />
-      <Route path="/contact" element={<Contact />} />
-    </Routes>
+    <>
+      <Profile username={username} />
+      <main>
+        <Links username={username} />
+        <Socials />
+      </main>
+      <Footer />
+    </>
   );
 }
 

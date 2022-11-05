@@ -4,3 +4,28 @@
   margin: 4rem auto;
   list-style: none;
 }
+
+.link:link,
+.link:visited {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #101828;
+
+  width: 100%;
+  background-color: #eaecf0;
+  padding: 1.7rem 3rem;
+  border-radius: 1rem;
+
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.link:link:not(:last-child) {
+  margin-bottom: 2.3rem;
+}
+
+.link:hover,
+.link:active {
+  color: #555;
+}

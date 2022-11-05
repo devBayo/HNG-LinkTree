@@ -37,7 +37,7 @@ const formGroups = [
   },
 ];
 
-const Form = () => {
+const Form = props => {
   return (
     <form className="contact-form">
       {formGroups.map((formGroup, i) => (
@@ -53,7 +53,8 @@ const Form = () => {
       <div className="contact-form-group contact-form-group__max-width contact-form-group__condition">
         <input type="checkbox" id="condition-input" required />
         <label htmlFor="condition-input" id="condition-label">
-          You agree to providing your data to devBayo who may contact you.
+          You agree to providing your data to {props.username} who may contact
+          you.
         </label>
       </div>
       <button

@@ -1,7 +1,7 @@
 import './Contact.css';
 import Form from '../components/Form/Form';
 
-const Contact = () => {
+const Contact = props => {
   return (
     <section className="contact">
       <div className="contact-heading">
@@ -11,7 +11,7 @@ const Contact = () => {
         </p>
       </div>
 
-      <Form />
+      <Form username={props.username} />
     </section>
   );
 };
